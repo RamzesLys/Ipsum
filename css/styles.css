@@ -28,11 +28,11 @@ h2 {
   padding: 0;
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
   margin:0px;
   padding:0px;
-  height:100%;
+  height:100vh;
 }
 
 ul,
@@ -50,9 +50,9 @@ body {
 	/* max-width: 1440px; */
 }
 
-html, body {
+/* html, body {
   height: 100%;
-}
+} */
 
 .wrapper {
   min-height: 100%;
@@ -62,8 +62,20 @@ html, body {
   position: relative;
   justify-content: space-between;
   background-attachment: fixed;
+  animation: show;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
+@keyframes show {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -72,33 +84,58 @@ html, body {
   width: 95%;
 }
 
+.bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding: 1em 0;
+  position: fixed;
+  left: 2.5%;
+  top: 0;
+  width: 95%;
 }
 
 .links {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   gap: 1em;
 }
 
-.links a:hover p, svg phil{
-  color: red;
+.link_home:hover path, .link_services:hover path, .link_contacts:hover path, .link_phone:hover path{
+ fill: #6CC852;
+ border-color: #6CC852;
+ transition: all 0.3s ease-in-out;
 }
 
-.links_item {
+.link_home:hover rect, .link_services:hover rect, .link_contacts:hover rect, .link_phone:hover rect{
+  stroke: #6CC852;
+  border-color: #6CC852;
+  transition: all 0.3s ease-in-out;
+ }
+
+.link_home, .link_services, .link_contacts, .link_phone {
+  color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
 }
 
-.links p {
-  color: white;
-  display: inline;
-  padding-left: 0.5em;
-}
+.link_home:hover, .link_services:hover , .link_contacts:hover , .link_phone:hover {
+  color: #6CC852;
+  transition: all 0.3s ease-in-out;
+} 
+
+
