@@ -3,7 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 
 h1 {
   margin: 0;
@@ -60,7 +60,8 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   background-attachment: fixed;
   animation: show;
   animation-duration: 5s;
@@ -85,13 +86,14 @@ body {
 }
 
 .bg-video {
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
   background: #000;
-  opacity: 0.5;
+  opacity: 0.3;
+  /* visibility: inherit; */
 }
 
 .header {
@@ -109,7 +111,7 @@ body {
 .links {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 3em;
 }
 
 .link_home:hover path, .link_services:hover path, .link_contacts:hover path, .link_phone:hover path{
@@ -138,4 +140,22 @@ body {
   transition: all 0.3s ease-in-out;
 } 
 
+.main_title {  
+  text-transform: uppercase;
+  font-size: 58px;
+  line-height: 14px;
+  font-weight: 400;
+  color: #6CC852;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 1;
+}
+
+.main_title span {
+  text-transform: none;
+  font-size: 33px;
+  line-height: 14px;
+  font-weight: 200;
+  color: #fff;
+}
 
