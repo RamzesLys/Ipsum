@@ -114,7 +114,7 @@ body {
 
 ._scroll {
   backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, .8);
   transition: all 0.3s ease-in-out;
   padding: 0.5em 1em;
 }
@@ -283,9 +283,8 @@ body {
   border-right: #6CC852 2px solid;
   display: flex;
   flex-direction: column;
-  /* width: 30vw; */
-  padding-right: 2em;
-  row-gap: 3em;
+  padding-right: 1em;
+  row-gap: 1em;
 }
 
 .services_items {
@@ -301,6 +300,10 @@ body {
   font-size: 16px;
   line-height: 100%;
   padding-left: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
 }
 
 .services_items:hover p {
@@ -312,7 +315,6 @@ body {
   fill: #6CC852;
   transition: all 0.3s ease-in-out;
  }
-
  
 .services_items:hover ellipse {
   fill: #6CC852;
@@ -323,11 +325,79 @@ body {
   stroke: #6CC852;
   transition: all 0.3s ease-in-out;
  } 
- /* .services_items:hover stroke {
-  fill: #6CC852;
-  border-color: #6CC852;
+
+ .services_items p::after {
+  content: "►";
+  color: #1A1A19;
+  padding-left: 1em;
+ }
+
+ .services_items:hover p::after {
+  color: #6CC852;
   transition: all 0.3s ease-in-out;
- } */
+ }
+
+ .services_content-block {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 2em;
+  margin: 1em;
+ }
+
+
+ footer {
+  margin-top: 3em;
+  padding: 2em 0;
+ }
+
+ .footer_block {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .footer_up {
+  border-bottom: solid #333333 1px;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: space-between;
+ }
+
+ .footer_up-item {
+  display: flex;
+  flex-direction: row;
+  align-items: unset;
+  justify-content: flex-start;
+ }
+
+ .footer_up-item_desc {
+  padding-left: 1em;
+  /* line-height: 1.5em; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+ }
+
+ .footer_up-item_desc h3 {
+  font-size: 18px;
+  color: #6cc852;
+  font-weight: 400;
+ }
+
+ .footer_up-item_desc p,  .footer_up-item_desc a {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+ }
+
+
+
  
 
 
