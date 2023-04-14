@@ -6,7 +6,7 @@ const description = document.querySelector('.desc_description');
 const header = document.querySelector('.header');
 window.onmousewheel = () => {
   if (window.scrollY >= 54) {
-    console.log('down');
+    console.log('--------------'+ scrollY);
     header.classList.add('_scroll');
   } else {
     console.log('else');
