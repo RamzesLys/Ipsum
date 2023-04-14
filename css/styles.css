@@ -117,7 +117,9 @@ body {
 .links {
   display: flex;
   flex-direction: row;
-  gap: 3em;
+  flex-wrap: wrap;
+  gap: 1em 2em;
+  padding: 0em 1em;
 }
 
 .link_home:hover path, .link_services:hover path, .link_contacts:hover path, .link_phone:hover path{
