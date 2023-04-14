@@ -303,3 +303,31 @@ body {
   padding-left: 1em;
 }
 
+.services_items:hover p {
+  color: #6CC852;
+  transition: all 0.3s ease-in-out;
+}
+
+.services_items:hover path {
+  fill: #6CC852;
+  transition: all 0.3s ease-in-out;
+ }
+
+ 
+.services_items:hover ellipse {
+  fill: #6CC852;
+  transition: all 0.3s ease-in-out;
+ }
+
+ .services_items:hover rect {
+  stroke: #6CC852;
+  transition: all 0.3s ease-in-out;
+ } 
+ /* .services_items:hover stroke {
+  fill: #6CC852;
+  border-color: #6CC852;
+  transition: all 0.3s ease-in-out;
+ } */
+ 
+
+
