@@ -6,14 +6,22 @@ const description = document.querySelector('.desc_description');
 const header = document.querySelector('.header');
 window.onmousewheel = () => {
   if (window.scrollY >= 54) {
-    console.log('--------------'+ scrollY);
     header.classList.add('_scroll');
   } else {
-    console.log('else');
     header.classList.remove('_scroll');
   }
 }
 
+
+
+const touchFunction = () => {
+  if (window.clientY <= 54) {
+    header.classList.add('_scroll');
+  } else {
+    header.classList.remove('_scroll');
+  }
+}
+window.addEventListener("touch", touchFunction);
 // window.addEventListener('scroll', function() {
 //   if (window.scrollY >= 54) {
 //     header.classList.addClass('header--scrolling'); // Добавить класс, который будет менять стили
