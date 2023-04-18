@@ -47,3 +47,24 @@ function handleTouchMove(event) {
   y1 = null
 }
 
+//БОКОВЕ МЕНЮ СЕРВІСУ
+const servicesMenuHidden = document.querySelector('.services_block-hidden');
+const buttonService = document.querySelector('.link_services');
+const buttonServiceClose = document.querySelector('.services_block-hidden-close')
+
+// buttonService.onclick = () => {
+//   servicesMenuHidden.classList.toggle('active_services');
+//   buttonServiceClose.classList.toggle('active_services');
+// }
+
+buttonService.onclick = () => {
+  servicesMenuHidden.classList.add('active_services');
+}
+
+buttonServiceClose.onclick = () => {
+  if (servicesMenuHidden.classList.contains('active_services')) {
+    servicesMenuHidden.classList.remove('active_services')
+  } else {
+    return false
+  }
+}
