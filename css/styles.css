@@ -3,7 +3,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   position: relative;
   /* overflow: hidden; */
+  z-index: 1;
 }
+
+._eclipse {
+  opacity: 0.1;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
 
@@ -52,7 +58,6 @@ body {
 	/* max-width: 1440px; */
  position: relative;
 }
-
 
 .wrapper {
   min-height: 100%;
@@ -276,6 +281,7 @@ body {
 
 .services {
   margin-top: 3em;
+  z-index: 1;
 }
 
 .services_block {
@@ -458,28 +464,29 @@ body {
  }
  
  .services_block-hidden {
-  display: none;
+  /* display: none; */
   position: fixed;
   width: 65vw;
   height: 99.8vh;
-  z-index: 3;
+  z-index: 2;
   opacity: 0.9;
-  transition: all 0.5s ease-in-out;
-
-  transform: translateX(-5%);
+  transition: all 0.7s ease-in;
+  transform: translateX(100%);
   top: 0.1vh;
   right: 0;
   background-color: #1A1A19;
   overflow-y: auto;
+  opacity: 1;
  }
 
  .active_services {
   display: block;
   /* right: 0; */
   transform: translate(0);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.7s ease-in;
   border-radius: 2em 0 0 2em;
   outline: 1px solid #6CC852;
+  z-index: 2;
  }
 
  .services_block-hidden .container {

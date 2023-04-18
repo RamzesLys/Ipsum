@@ -2,7 +2,9 @@ const wrap = document.querySelector('.wrapper');
 const desc = document.querySelector('.desc');
 const description = document.querySelector('.desc_description');
 const header = document.querySelector('.header');
-
+const main = document.querySelector('.main');
+const services = document.querySelector('.services');
+const footer = document.querySelector('.footer');
 
 
 //СКРОЛ МИШІ ВНИЗ
@@ -24,7 +26,6 @@ function handleTouchStart(event) {
  const firstTouch = event.touches[0];
  x1 = firstTouch.clientX;
  y1 = firstTouch.clientY;
-//  console.log(x1, y1);
 }
 
 function handleTouchMove(event) {
@@ -59,12 +60,21 @@ const buttonServiceClose = document.querySelector('.services_block-hidden-close'
 
 buttonService.onclick = () => {
   servicesMenuHidden.classList.add('active_services');
+  header.classList.add('_eclipse');
+  main.classList.add('_eclipse');
+  desc.classList.add('_eclipse');
+  services.classList.add('_eclipse');
+  footer.classList.add('_eclipse');
 }
 
 buttonServiceClose.onclick = () => {
-  if (servicesMenuHidden.classList.contains('active_services')) {
-    servicesMenuHidden.classList.remove('active_services')
-  } else {
-    return false
-  }
+  servicesMenuHidden.classList.remove('active_services');
+  header.classList.remove('_eclipse');
+  main.classList.remove('_eclipse');
+  desc.classList.remove('_eclipse');
+  services.classList.remove('_eclipse');
+  footer.classList.remove('_eclipse');
+
+
+
 }
