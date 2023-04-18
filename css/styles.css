@@ -50,6 +50,7 @@ a {
 
 body {
 	/* max-width: 1440px; */
+ position: relative;
 }
 
 
@@ -99,6 +100,10 @@ body {
 
 .header {
   padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
@@ -153,8 +158,6 @@ body {
   color: #6CC852;
   transition: all 0.3s ease-in-out;
 } 
-
-
 
 .main {
   display: flex;
@@ -405,7 +408,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 3em 0 1em;
+  padding: 3em 0;
   gap: 1em;
  }
 
@@ -457,14 +460,14 @@ body {
  .services_block-hidden {
   display: none;
   position: fixed;
-  width: 72vw;
-  height: 100vh;
+  width: 65vw;
+  height: 99.8vh;
   z-index: 3;
   opacity: 0.9;
   transition: all 1s ease-in-out;
   right: -55%;
-  top: 0;
-  background-color: #6cc852;
+  top: 0.1vh;
+  background-color: #1A1A19;
   overflow-y: auto;
  }
 
@@ -473,6 +476,7 @@ body {
   right: 0;
   transition: all 1s ease-in-out;
   border-radius: 2em 0 0 2em;
+  outline: 1px solid #6CC852;
  }
 
  .services_block-hidden .container {
@@ -480,9 +484,63 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 1em 0;
  }
 
+ .services_block-hidden-close {
+  margin: 0 auto;
+  cursor: pointer;
+ }
 
+ .services_block-hidden-close:hover svg path {
+  fill: #6CC852;
+  transition: all 0.3s ease-in-out;
+ }
+
+ .services_block-hidden-desc {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 600;
+ }
+
+.services_hidden-elements {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 1em;
+}
+
+.services_hidden-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  color: #fff;
+  font-weight: 500;
+  width: 250px;
+}
+
+.services_hidden-items a {
+  text-decoration: none;
+}
+
+.services_hidden-items:hover p {
+  color: #6CC852;
+  transition: all 0.3s ease-in-out;
+}
+
+.services_hidden-items:hover path {
+  fill: #6CC852;
+  transition: all 0.3s ease-in-out;
+ }
+
+ .services_hidden-items:hover rect {
+  stroke: #6CC852;
+  transition: all 0.3s ease-in-out;
+ } 
 
 
 
