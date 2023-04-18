@@ -485,12 +485,12 @@ body {
   /* display: none; */
   position: fixed;
   width: 65vw;
-  height: 99.8vh;
+  height: 98vh;
   /* z-index: 3; */
   opacity: 0.9;
   transition: all 0.7s ease-in;
   transform: translateX(100%);
-  top: 0.1vh;
+  top: 1vh;
   right: 0;
   background-color: #1A1A19;
   overflow-y: auto;
@@ -570,6 +570,9 @@ body {
   stroke: #6CC852;
   transition: all 0.3s ease-in-out;
  } 
+
+
+ 
 
 
 
