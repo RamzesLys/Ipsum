@@ -156,6 +156,10 @@ body {
   padding: 0em 1em;
 }
 
+.link_services, .link_phone {
+  font-size: 16px;
+}
+
 .link_home:hover path, .link_services:hover path, .link_contacts:hover path, .link_phone:hover path{
  fill: #6CC852;
  border-color: #6CC852;
@@ -276,7 +280,7 @@ body {
 .desc_icon-item {
   width: 33.33%;
   text-align: center;
-  padding: 0 60px;
+  padding: 0 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -511,7 +515,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding: 1em 0;
  }
 
@@ -519,6 +523,7 @@ body {
   margin: 0 auto;
   cursor: pointer;
   outline: none;
+  padding: 1em 0;
  }
 
  .services_block-hidden-close:hover svg path {
@@ -531,9 +536,11 @@ body {
   font-size: 30px;
   color: #fff;
   font-weight: 600;
+  padding: 1em 0;
  }
 
 .services_hidden-elements {
+  padding-top: 2em;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -657,6 +664,38 @@ body {
 
 
 
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .desc_item-title {
+    font-size: 16px;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .desc_item-title {
+    font-size: 15px;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+
+}
  
 
 

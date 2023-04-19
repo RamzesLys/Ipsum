@@ -79,3 +79,12 @@ buttonServiceClose.onclick = () => {
   // services.classList.remove('_eclipse');
   // footer.classList.remove('_eclipse');
 }
+
+//BURGER-MENU
+const headerHamb = document.querySelector('.header_hamb');
+const menuHidden = document.querySelector('.header_hidden');
+
+	headerHamb.onclick = () => {
+		headerHamb.classList.toggle('active');
+		menuHidden.classList.toggle('active');
+	}
