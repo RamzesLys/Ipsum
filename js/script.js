@@ -54,6 +54,7 @@ const servicesMenuHidden = document.querySelector('.services_block-hidden');
 const buttonService = document.querySelector('.link_services');
 const buttonServiceClose = document.querySelector('.services_block-hidden-close');
 const buttonServiceHidden = document.querySelector('.link_services-hidden');
+const mainMenu = document.querySelector('.main');
 
 // buttonService.onclick = () => {
 //   servicesMenuHidden.classList.toggle('active_services');
@@ -74,7 +75,7 @@ buttonService.onclick = () => {
 buttonServiceHidden.onclick = () => {
   servicesMenuHidden.classList.add('active_services');
   console.log('hidden_work');
-  // darkBg.classList.add('_open');
+  darkBg.classList.add('_open');
 }
 
 buttonServiceClose.onclick = () => {
@@ -94,4 +95,5 @@ const menuHidden = document.querySelector('.header_hidden');
 	headerHamb.onclick = () => {
 		headerHamb.classList.toggle('active');
 		menuHidden.classList.toggle('active');
+    mainMenu.classList.toggle('hide')
 	}
