@@ -52,7 +52,8 @@ function handleTouchMove(event) {
 //БОКОВЕ МЕНЮ СЕРВІСУ
 const servicesMenuHidden = document.querySelector('.services_block-hidden');
 const buttonService = document.querySelector('.link_services');
-const buttonServiceClose = document.querySelector('.services_block-hidden-close')
+const buttonServiceClose = document.querySelector('.services_block-hidden-close');
+const buttonServiceHidden = document.querySelector('.link_services-hidden');
 
 // buttonService.onclick = () => {
 //   servicesMenuHidden.classList.toggle('active_services');
@@ -68,6 +69,12 @@ buttonService.onclick = () => {
   // desc.classList.add('_eclipse');
   // services.classList.add('_eclipse');
   // footer.classList.add('_eclipse');
+}
+
+buttonServiceHidden.onclick = () => {
+  servicesMenuHidden.classList.add('active_services');
+  console.log('hidden_work');
+  // darkBg.classList.add('_open');
 }
 
 buttonServiceClose.onclick = () => {
