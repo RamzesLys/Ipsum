@@ -10,7 +10,8 @@ const darkBg = document.querySelector('._eclipse');
 
 //СКРОЛ МИШІ ВНИЗ
 window.onmousewheel = () => {
-  if (window.scrollY >= 54) {
+  if (window.scrollY >= 34) {
+    console.log('scroll');
     header.classList.add('_scroll');
   } else {
     header.classList.remove('_scroll');
@@ -24,9 +25,9 @@ let x1 = null;
 let y1 = null;
 
 function handleTouchStart(event) {
- const firstTouch = event.touches[0];
- x1 = firstTouch.clientX;
- y1 = firstTouch.clientY;
+  const firstTouch = event.touches[0];
+  x1 = firstTouch.clientX;
+  y1 = firstTouch.clientY;
 }
 
 function handleTouchMove(event) {
@@ -92,8 +93,8 @@ buttonServiceClose.onclick = () => {
 const headerHamb = document.querySelector('.header_hamb');
 const menuHidden = document.querySelector('.header_hidden');
 
-	headerHamb.onclick = () => {
-		headerHamb.classList.toggle('active');
-		menuHidden.classList.toggle('active');
-    mainMenu.classList.toggle('hide')
-	}
+headerHamb.onclick = () => {
+  headerHamb.classList.toggle('active');
+  menuHidden.classList.toggle('active');
+  mainMenu.classList.toggle('hide')
+}

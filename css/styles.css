@@ -125,7 +125,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   transition: all 0.3s ease-in-out;
 }
 
@@ -213,7 +213,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.7s ease-in-out;
- width: 90vw;
+  width: 90vw;
+  z-index: 1;
 }
 
 .main.hide {
@@ -257,7 +258,7 @@ body {
   color: #6cc852;
   border: #6cc852 solid 2px;
   transition: all 0.3s ease-in-out;
-}
+}  
 
 .desc {
   display: flex;
