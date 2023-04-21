@@ -2,7 +2,7 @@ const wrap = document.querySelector('.wrapper');
 const desc = document.querySelector('.desc');
 const description = document.querySelector('.desc_description');
 const header = document.querySelector('.header');
-// const main = document.querySelector('.main');
+const main = document.querySelector('.main');
 // const services = document.querySelector('.services');
 // const footer = document.querySelector('.footer');
 const darkBg = document.querySelector('._eclipse');
@@ -29,9 +29,14 @@ const body = document.querySelector('.body')
 body.onmousewheel = () => { 
   if (document.body.scrollTop > 50) {
     header.classList.add('_scroll');
+
   } 
   else {
     header.classList.remove('_scroll');
+    main.style.opacity = '1'
+ }
+ if (document.body.scrollTop > 60) {
+  main.style.opacity = '0.5';
  }
 }
 
