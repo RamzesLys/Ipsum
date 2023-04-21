@@ -6,17 +6,37 @@ const header = document.querySelector('.header');
 // const services = document.querySelector('.services');
 // const footer = document.querySelector('.footer');
 const darkBg = document.querySelector('._eclipse');
+const body = document.querySelector('.body')
+
+// console.log('oTop --- ' + header.offsetTop);
+// console.log('oHeight --- ' + header.offsetHeight);
+// console.log('cHeight --- ' + header.clientHeight);
 
 
-//СКРОЛ МИШІ ВНИЗ
-window.onmousewheel = () => {
-  if (window.scrollY >= 34) {
-    console.log('scroll');
+
+// СКРОЛ МИШІ ВНИЗ
+
+// window.addEventListener('scroll', function() {
+//   console.log(pageYOffset);
+//   if (pageYOffset > 50) {
+//    header.classList.add('_scroll')
+//   } else {
+//     header.classList.remove('_scroll')
+//   }
+// })
+
+
+body.onmousewheel = () => { 
+  if (document.body.scrollTop > 50) {
     header.classList.add('_scroll');
-  } else {
+  } 
+  else {
     header.classList.remove('_scroll');
-  }
+ }
 }
+
+
+
 
 //СВАЙП ВНИЗ
 document.addEventListener('touchstart', handleTouchStart, false);
