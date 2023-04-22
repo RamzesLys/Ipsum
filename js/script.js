@@ -3,45 +3,21 @@ const desc = document.querySelector('.desc');
 const description = document.querySelector('.desc_description');
 const header = document.querySelector('.header');
 const main = document.querySelector('.main');
-// const services = document.querySelector('.services');
-// const footer = document.querySelector('.footer');
 const darkBg = document.querySelector('._eclipse');
 const body = document.querySelector('.body')
 
-// console.log('oTop --- ' + header.offsetTop);
-// console.log('oHeight --- ' + header.offsetHeight);
-// console.log('cHeight --- ' + header.clientHeight);
-
-
-
 // СКРОЛ МИШІ ВНИЗ
-
-// window.addEventListener('scroll', function() {
-//   console.log(pageYOffset);
-//   if (pageYOffset > 50) {
-//    header.classList.add('_scroll')
-//   } else {
-//     header.classList.remove('_scroll')
-//   }
-// })
-
-
 body.onmousewheel = () => { 
-  if (document.body.scrollTop > 50) {
+  console.log( main.getBoundingClientRect().top);
+  if (document.body.scrollTop >= 50 && main.getBoundingClientRect().top <= 35) {
     header.classList.add('_scroll');
-
+    main.style.left = '-70%';
   } 
   else {
     header.classList.remove('_scroll');
-    main.style.opacity = '1'
+    main.style.left = '50%';
  }
- if (document.body.scrollTop > 60) {
-  main.style.opacity = '0.5';
  }
-}
-
-
-
 
 //СВАЙП ВНИЗ
 document.addEventListener('touchstart', handleTouchStart, false);
@@ -90,12 +66,6 @@ const mainMenu = document.querySelector('.main');
 buttonService.onclick = () => {
   servicesMenuHidden.classList.add('active_services');
   darkBg.classList.add('_open')
-
-  // header.classList.add('_eclipse');
-  // main.classList.add('_eclipse');
-  // desc.classList.add('_eclipse');
-  // services.classList.add('_eclipse');
-  // footer.classList.add('_eclipse');
 }
 
 buttonServiceHidden.onclick = () => {
@@ -107,11 +77,6 @@ buttonServiceHidden.onclick = () => {
 buttonServiceClose.onclick = () => {
   servicesMenuHidden.classList.remove('active_services');
   darkBg.classList.remove('_open')
-  // header.classList.remove('_eclipse');
-  // main.classList.remove('_eclipse');
-  // desc.classList.remove('_eclipse');
-  // services.classList.remove('_eclipse');
-  // footer.classList.remove('_eclipse');
 }
 
 //BURGER-MENU
