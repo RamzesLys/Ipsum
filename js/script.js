@@ -8,16 +8,14 @@ const body = document.querySelector('.body')
 
 // СКРОЛ МИШІ ВНИЗ
 body.onmousewheel = () => { 
-  console.log( main.getBoundingClientRect().top);
-  if (document.body.scrollTop >= 50 && main.getBoundingClientRect().top <= 35) {
+  console.log('main ---- ' + main.getBoundingClientRect().top);
+  console.log('body ---- ' + document.body.scrollTop);
+  if (document.body.scrollTop >= 50) {
     header.classList.add('_scroll');
-    main.style.left = '-70%';
-  } 
-  else {
+ }  else {
     header.classList.remove('_scroll');
-    main.style.left = '50%';
  }
- }
+}
 
 //СВАЙП ВНИЗ
 document.addEventListener('touchstart', handleTouchStart, false);
@@ -57,11 +55,6 @@ const buttonService = document.querySelector('.link_services');
 const buttonServiceClose = document.querySelector('.services_block-hidden-close');
 const buttonServiceHidden = document.querySelector('.link_services-hidden');
 const mainMenu = document.querySelector('.main');
-
-// buttonService.onclick = () => {
-//   servicesMenuHidden.classList.toggle('active_services');
-//   buttonServiceClose.classList.toggle('active_services');
-// }
 
 buttonService.onclick = () => {
   servicesMenuHidden.classList.add('active_services');
