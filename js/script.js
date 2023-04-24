@@ -2,14 +2,14 @@ const wrap = document.querySelector('.wrapper');
 const desc = document.querySelector('.desc');
 const description = document.querySelector('.desc_description');
 const header = document.querySelector('.header');
-const main = document.querySelector('.main');
+// const main = document.querySelector('.main');
 const darkBg = document.querySelector('._eclipse');
 const body = document.querySelector('.body')
 
 // СКРОЛ МИШІ ВНИЗ
 body.onmousewheel = () => { 
-  console.log('main ---- ' + main.getBoundingClientRect().top);
-  console.log('body ---- ' + document.body.scrollTop);
+  // console.log('main ---- ' + main.getBoundingClientRect().top);
+  // console.log('body ---- ' + document.body.scrollTop);
   if (document.body.scrollTop >= 50) {
     header.classList.add('_scroll');
  }  else {
@@ -54,19 +54,16 @@ const servicesMenuHidden = document.querySelector('.services_block-hidden');
 const buttonService = document.querySelector('.link_services');
 const buttonServiceClose = document.querySelector('.services_block-hidden-close');
 const buttonServiceHidden = document.querySelector('.link_services-hidden');
-const mainMenu = document.querySelector('.main');
-
+// const mainMenu = document.querySelector('.main');
 buttonService.onclick = () => {
   servicesMenuHidden.classList.add('active_services');
   darkBg.classList.add('_open')
 }
-
 buttonServiceHidden.onclick = () => {
   servicesMenuHidden.classList.add('active_services');
   console.log('hidden_work');
   darkBg.classList.add('_open');
 }
-
 buttonServiceClose.onclick = () => {
   servicesMenuHidden.classList.remove('active_services');
   darkBg.classList.remove('_open')

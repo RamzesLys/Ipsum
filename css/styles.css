@@ -122,7 +122,7 @@ body {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  width: 99%;
+  width: 100%;
   z-index: 3;
   transition: all 0.3s ease-in-out;
 }
@@ -588,6 +588,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   row-gap: 3em;
+  text-align: center;
 }
 
 .services_hidden-items {
@@ -762,10 +763,24 @@ footer {
   .header_hamb {
     display: block;
   }
-
   .services_block-hidden {
     width: 100vw;
   }
+  .header_hidden-links li a svg {
+    width: 50px;
+    height: 50px;
+  }
+  .header_hidden-links li a {
+    font-size: 20px;
+  }
+  .services_hidden-items svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .services_hidden-items p {
+    font-size: 14px;
+  } 
   
   .desc_item-title {
     font-size: 15px;
@@ -793,20 +808,20 @@ footer {
 
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
-  /* .links,
-  .link_phone {
-    display: none;
+
+  .services_hidden-elements {
+  justify-content: center;
   }
-  .header_hamb {
-    display: block;
-  } */
- 
   .services_hidden-items svg {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+  .services_block-hidden-desc {
+    font-size: 20px;
   }
   .desc_description {
-    font-size: 14px;
+    font-size: 12px;
   } 
   .desc_icon-block {
     flex-direction: column;
@@ -816,8 +831,17 @@ footer {
   .desc_icon-item {
     width: 100%;
   }
+  .services_names-block {
+    width: 37vw;
+  }
+  .services_items svg {
+    width: 45px;
+  }
   .services_items p {
     font-size: 12px;
+  }
+  .footer {
+    margin-top: 2em;
   }
   .footer_up {
     flex-flow: row wrap;
@@ -827,9 +851,10 @@ footer {
     width: 40vw;
     align-items: center;
   }
-  .footer_up-item:first-child {
-    padding-left: 0.7em;
+  .footer_up-item:first-child svg {
+    margin-right: 0.7em;
   }
+ 
   .footer_up-item:nth-child(2), .footer_up-item:nth-child(4) {
    justify-content: flex-end;
   }
@@ -837,18 +862,45 @@ footer {
     padding-right: 1em;
   }
   .footer_down-guarantee a {
-    font-size: 12px;
+    font-size: 9px;
   }
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
   .links,
   .link_phone {
     display: none;
   }
   .header_hamb {
     display: block;
+  }
+  .footer_up {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70%;
+  }
+  .footer_up-item {
+    justify-content: flex-start;
+    width: auto;
+  }
+  .footer_up-item:nth-child(2), .footer_up-item:nth-child(4) {
+    justify-content: flex-start;
+   }
+  .footer_up-item svg {
+    min-width: 55px;
+  }
+
+  
+  .footer_up-item:first-child svg {
+    margin-right: 0em;
+  }
+
+  .footer_up-item_desc h3 {
+    font-size: 12px;
   }
 }
 
