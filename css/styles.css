@@ -256,7 +256,7 @@ body {
   color: #6cc852;
   border: #6cc852 solid 2px;
   transition: all 0.3s ease-in-out;
-}  
+}
 
 .desc {
   display: flex;
@@ -343,7 +343,7 @@ body {
 
 .services_items {
   display: flex;
-   flex-direction: column;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.5em;
@@ -357,7 +357,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .services_items:hover p {
@@ -542,7 +541,7 @@ footer {
   /* right: 0; */
   transform: translate(0);
   transition: all 0.7s ease-in;
- 
+
   z-index: 5;
 }
 
@@ -727,30 +726,45 @@ footer {
   border-radius: 5em;
   /* box-shadow: #000 0.5em 0.5em 0.5em; */
   backdrop-filter: blur(1px);
-  animation: shake 1s;
+  animation: shake 1.5s;
   animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
   /* 10% { transform: translate(-1px, -2px) rotate(-1deg); } */
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
   /* 40% { transform: translate(1px, -1px) rotate(1deg); } */
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
   /* 70% { transform: translate(3px, 1px) rotate(-1deg); } */
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
-
-@media screen and  (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .desc_item-title {
     font-size: 16px;
   }
- 
+
   .footer_down-guarantee {
     flex-direction: column;
     align-items: flex-start;
@@ -790,7 +804,7 @@ footer {
   }
   .services_hidden-items p {
     font-size: 14px;
-  } 
+  }
   .desc_item-title {
     font-size: 15px;
   }
@@ -804,37 +818,38 @@ footer {
   .footer_up-item_desc h3 {
     font-size: 14px;
   }
-  .footer_up-item_desc p, .footer_up-item_desc a {
+  .footer_up-item_desc p,
+  .footer_up-item_desc a {
     font-size: 10px;
   }
   .footer_up-item svg {
-   height: 30px;
+    height: 30px;
   }
-   .footer_down-guarantee a, .footer_copyright {
+  .footer_down-guarantee a,
+  .footer_copyright {
     font-size: 14px;
   }
 }
 
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
-
   .services_hidden-elements {
-  justify-content: center;
+    justify-content: center;
   }
   .services_hidden-items {
     gap: 0.5em;
   }
   .services_hidden-items svg {
-  width: 50px;
-  height: 50px;
-}
+    width: 50px;
+    height: 50px;
+  }
 
   /* .services_block-hidden-desc {
     font-size: 16px;
   } */
   .desc_description {
     font-size: 12px;
-  } 
+  }
   .desc_icon-block {
     flex-direction: column;
     align-items: center;
@@ -863,14 +878,16 @@ footer {
   .footer_up-item:first-child svg {
     margin-right: 0.7em;
   }
- 
-  .footer_up-item:nth-child(2), .footer_up-item:nth-child(4) {
-   justify-content: flex-end;
+
+  .footer_up-item:nth-child(2),
+  .footer_up-item:nth-child(4) {
+    justify-content: flex-end;
   }
   .footer_up-item:nth-child(4) .footer_up-item_desc {
     padding-right: 1em;
   }
-  .footer_down-guarantee a, .footer_copyright {
+  .footer_down-guarantee a,
+  .footer_copyright {
     font-size: 9px;
   }
 }
@@ -902,14 +919,14 @@ footer {
     justify-content: flex-start;
     width: auto;
   }
-  .footer_up-item:nth-child(2), .footer_up-item:nth-child(4) {
+  .footer_up-item:nth-child(2),
+  .footer_up-item:nth-child(4) {
     justify-content: flex-start;
-   }
+  }
   .footer_up-item svg {
     min-width: 55px;
   }
 
-  
   .footer_up-item:first-child svg {
     margin-right: 0em;
   }
@@ -934,4 +951,3 @@ footer {
     font-size: 8px;
   }
 }
-
