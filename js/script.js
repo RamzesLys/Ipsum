@@ -78,3 +78,10 @@ headerHamb.onclick = () => {
   menuHidden.classList.toggle('active');
   mainMenu.classList.toggle('hide')
 }
+
+//ACTIVE BLOCK 
+const servicesItems = document.querySelectorAll('.services_items');
+
+servicesItems[0].onclick = () => {
+  
+}
