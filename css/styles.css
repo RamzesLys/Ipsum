@@ -728,13 +728,13 @@ footer {
   align-items: center;
   gap: 4em;
 } */
-
+/* 
 @media screen and (max-width: 1200px) {
  .services_items::after {
    left: 19%;
 }
 
-}
+} */
 
 /* Landscape tablets and medium desktops */
 /* (min-width: 992px) and */
@@ -748,6 +748,8 @@ footer {
     align-items: flex-start;
     gap: 1em;
   }
+  .services_items::after {
+    left: 19%;
 }
 
 /* Portrait tablets and small desktops */
@@ -774,7 +776,9 @@ footer {
     width: 60px;
     height: 60px;
   }
-
+  .services_items::after {
+    left: 20%;
+  }
   .services_hidden-items p {
     font-size: 14px;
   } 
