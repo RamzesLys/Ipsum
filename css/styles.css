@@ -350,6 +350,29 @@ body {
   /* position: relative; */
 }
 
+.services_items.active {
+  color: #6cc852;
+}
+
+.services_items.active p {
+  color: #6cc852;
+}
+
+.services_items.active path {
+  fill: #6cc852;
+  transition: all 0.3s ease-in-out;
+}
+
+.services_items.active ellipse {
+  fill: #6cc852;
+  transition: all 0.3s ease-in-out;
+}
+
+.services_items.active rect {
+  stroke: #6cc852;
+  transition: all 0.3s ease-in-out;
+}
+
 .services_items p {
   color: #fff;
   font-weight: 600;
@@ -412,38 +435,31 @@ body {
   height: 100%;
   border-radius: 0.5em;
   border: #fff solid 2px;
-  /* position: relative; */
-  background-color: rgba(0, 0, 0, 0.7);
+  text-align: justify;
+  align-items: center;
+ 
+  /* background-color: rgba(0, 0, 0, 0.7); */
   /* z-index: 1; */
 }
 
-/* .services_content-item::before {
-  content: "";
-  background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 0.5em;
-  z-index: 1;
-} */
-
 .services_content-item.active {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .services_content-item:nth-child(1) {
-  display: block;
-  background: center/ contain no-repeat url(/img/background/electro.png), #000 40%;
+  background: linear-gradient( rgba(0, 0, 82, 0.7), rgba(0, 0, 0, 0.8) ), url(/img/background/electro.png) no-repeat center;
+  background-size: cover;
+ 
 }
 
 .services_content-item p {
-  /* z-index: 2; */
   font-size: 18px;
+  color: #fff;
+  /* width: 70%; */
+  /* text-align: center; */
+  /* margin: 10%; */
+  margin: 0 10%;
+  line-height: 2em;
 
 }
 
