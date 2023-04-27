@@ -447,7 +447,8 @@ body {
 }
 
 .services_content-item:nth-child(1) {
-  background: linear-gradient( rgba(0, 0, 82, 0.7), rgba(0, 0, 0, 0.8) ), url(/img/background/electro.png) no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5) ), url(/img/background/electro.png) no-repeat center;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(108, 200, 82, 0.1) ), url(/img/background/electro.png) no-repeat center; */
   background-size: cover;
  
 }
