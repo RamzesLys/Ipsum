@@ -633,6 +633,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
   row-gap: 3em;
   text-align: center;
 }
@@ -889,7 +890,7 @@ footer {
 /* Landscape phones and portrait tablets */
 @media screen and (max-width: 767px) {
   .services_hidden-elements {
-    justify-content: center;
+    row-gap: 2em;
   }
   .services_hidden-items {
     gap: 0.5em;
@@ -956,8 +957,15 @@ footer {
     padding: 0;
   }
   .services_hidden-elements {
-    row-gap: 2em;
-    padding: 2em 0 3em 0;
+    row-gap: 1em;
+    padding: 1em 0 3em 0;
+    justify-content: center;
+  }
+  .services_hidden-elements p {
+    font-size: 12px;
+  }
+  .services_hidden-items {
+    width: 150px;
   }
   .services_items p {
     font-size: 10px;
