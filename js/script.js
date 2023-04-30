@@ -76,12 +76,33 @@ const menuHidden = document.querySelector('.header_hidden');
 headerHamb.onclick = () => {
   headerHamb.classList.toggle('active');
   menuHidden.classList.toggle('active');
-  mainMenu.classList.toggle('hide')
+  mainMenu.classList.toggle('hide');
 }
 
 //ACTIVE BLOCK 
-const servicesItems = document.querySelectorAll('.services_items');
+const servicesItems = Array.from(document.querySelectorAll('.services_items'));
+const serviceContent = Array.from(document.querySelectorAll('.services_content-item'));
 
-servicesItems[0].onclick = () => {
-  
+const clearActiveClass = (element, className = 'active') => {
+  element.find(item => item.classList.remove(`${className}`))
 }
+
+const setActiveClass = (element, index, className = 'active') => {
+  element[index].classList.add(`${className}`);
+}
+
+const checkoutTabs = (item, index) => {
+  item.addEventListener('click', () => {
+    console.log(item);
+
+    if (item.classList.contains('active')) 
+    return
+
+    clearActiveClass(servicesItems);
+    clearActiveClass(serviceContent);
+
+    setActiveClass(servicesItems, index);
+    setActiveClass(serviceContent, index);
+  })
+}
+servicesItems.forEach(checkoutTabs);
